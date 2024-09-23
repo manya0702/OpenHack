@@ -21,17 +21,18 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Change directory to project folder
-      run: cd EmployeeAdminPortal/EmployeeAdminPortal
-
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: EmployeeAdminPortal/EmployeeAdminPortal
 
     - name: Build
       run: dotnet build --no-restore --configuration Release
+      working-directory: EmployeeAdminPortal/EmployeeAdminPortal
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      working-directory: EmployeeAdminPortal/EmployeeAdminPortal
 
     - name: Publish
       run: dotnet publish --no-build --configuration Release --output ./publish
+      working-directory: EmployeeAdminPortal/EmployeeAdminPortal
