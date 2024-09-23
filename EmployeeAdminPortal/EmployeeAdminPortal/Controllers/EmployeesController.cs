@@ -82,5 +82,6 @@ namespace EmployeeAdminPortal.Controllers
             emp.Salary = updateEmployeeDto.Salary;
 
             dbContext.SaveChanges();
+        }
     }
 }
