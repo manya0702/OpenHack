@@ -80,8 +80,8 @@ namespace EmployeeAdminPortal.Controllers
             emp.Email = updateEmployeeDto.Email;        
             emp.Phone = updateEmployeeDto.Phone;
             emp.Salary = updateEmployeeDto.Salary;
-
             dbContext.SaveChanges();
+            return Ok(emp);
         }
     }
 }
